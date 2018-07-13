@@ -1,0 +1,495 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*
+Theme Name: Jared
+Author: Adam Kozie
+Author URL: http://www.adamkozie.com
+Description: WordPress theme for Jared Borkowski website.
+Version: 1.0
+*/
+
+/*
+COLOR PALLETTE
+#fff - white, background etc.
+#cf7b0c - burnt orange, hyperlinks, accents etc.
+#252525 - near-black, typography and other black objects
+#f2f2f2 - light gray, nav/footer backgrounds etc.
+#7f7f7f - 50% gray, accents, visited links, etc.
+*/
+
+/* Wordpress core generated classes
+--------------------------------------------------------*/
+
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Begin custom styles
+-----------------------------------------------------------------------*/
+
+* {
+    margin: 0 auto;
+    max-width:1200px;
+    padding:0px;
+    font-family: '' 'Roboto', sans-serif;
+}
+html {
+    font-size: 1em;
+}
+
+/* Nav Styles
+-------------------------------------------------------*/
+
+#nav-box {
+    height:70px;
+    background-color:#252525;
+    font-weight:300;
+}
+#nav-box a {
+    text-decoration:none;
+}
+#nav-logo {
+    width:10%;
+    float:left;
+}
+#nav-logo img {
+    height:60px;
+    margin:5px 0 5px 6px;
+}
+#nav {
+    width:90%;
+    float:right;
+}
+ul#menu-main {
+    margin-top:14px;
+    margin-left:0;
+    margin-right:0;
+    display: block;
+    text-align: center;
+}
+ul#menu-main > li {
+    width:10%;
+    padding:0;
+    margin-left:0;
+    margin-right:0;
+
+}
+ul#menu-main > li{
+    display: inline-block;
+    height: inherit;
+    padding: 10px 8px;
+}
+ul#menu-main > li > a{
+    display: block;
+    padding: -10px;
+    color:#fff;
+}
+ul#menu-main > li:hover ul{
+    display: block;
+}
+/* sub menu */
+ul.sub-menu {
+    background-color:#252525;
+    display: none;
+    position: absolute;
+    text-align: left;
+    margin:10px 0 0 0;
+}
+ul.sub-menu > li > a {
+    border-radius:5px;
+    color:#fff;
+    display: block;
+    padding: 10px;
+}
+/* sub-sub menus */
+ul.sub-menu > li > ul {
+    width:100%;
+    position:relative;
+}
+ul.sub-menu > li > ul > li:first-of-type {
+    margin-top:-5px;
+}
+ul.sub-menu > li > ul > li > a {
+    padding-left:40px;
+}
+ul#menu-main a:link {
+	color:#fff;
+}
+ul#menu-main a:visited {
+    color:#fff;
+}
+ul#menu-main a:hover {
+	color:#f69679; /* peach */
+}
+ul#menu-main .current-menu-item > a{
+    color:#f69679;
+}
+ul#menu-main .current-page-parent > a {
+    color:#f69679;
+}
+ul#menu-main .current-page-ancestor > a {
+    color:#f69679;
+}
+ul#slicknav_menu .current-menu-item > a{
+    color:#f69679;
+}
+ul#slicknav_menu .current-page-parent > a {
+    color:#f69679;
+}
+ul#slicknav_menu .current-page-ancestor > a {
+    color:#f69679;
+}
+
+/* front-page styles
+---------------------------------------------------*/
+
+.front-page-img {
+    width:100%;
+    margin-top:-10px;
+}
+
+/* main styles
+---------------------------------------------------*/
+
+body {
+    background:#fff;
+/*    line-height: 1.45;*/
+}
+#wrapper {
+}
+#content {
+    color:#252525;
+    width:59.5%;
+    float:left;
+}
+article.post img {
+    width:96%;
+    height:auto;
+    float:left;
+    margin-left:2%;
+    margin-right:2%;
+}
+
+/* blog page (index.php) styles
+--------------------------------------------------------*/
+
+#main article.post-excerpt {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+img.attachment-thumbnail {
+    border: .5px solid #000;
+    padding: 5px;
+    float:left;
+    margin: 5px 15px 5px 5%;
+}
+article.post img {
+    width:auto;
+    max-width:90%;
+    margin:15px 5%;
+}
+
+/* typography styles
+-------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6, p, hr, blockquote {
+    margin: 30px 5%;
+}
+hr {
+    border-top:.5px solid #fff;
+    border-bottom:.5px solid #252525;
+}
+
+/* Link styles
+---------------------------------------------------*/
+
+a:link {
+	color:#000;
+}
+a:visited {
+    color:#252525;
+}
+a:hover {
+	color:#f69679; /*peach */
+}
+
+/* Video, Image Styles
+-------------------------------------------------------------- */
+
+.size-large, .size-full {
+    max-width:100%;
+    height:auto;
+}
+/* embedresponsively.com YouTube CSS */
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+    margin:15px 0;
+} 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+}
+
+
+/* Photo Gallery Styles */
+.gallery-caption {
+    display:none;
+}
+.gallery-item {
+    width:30%;
+}
+.gallery-icon > a > img {
+    width:60% !important;
+    height:auto;
+    margin-left:20%;
+}
+/* Lightbox Pop-Up Styles */
+.jp-carousel-slide {
+    display:none !important;
+}
+.selected {
+    display:block !important;
+}
+.jp-carousel-photo-info  {
+    display:none !important;
+}
+
+/* Widget Styles
+-------------------------------------------------------------- */
+
+/*Admin widget */
+.textwidget {
+    margin-left:5%;
+}
+.widget-hr {
+    margin:30px 0 20px 0;
+    max-width:500px;
+}
+/* Calendar Widget */
+.timely {
+    margin-left:5% !important;
+}
+.ai1ec-month {
+    background:#252525 !important;
+}
+.ai1ec-event-title {
+    color:#252525 !important;
+}
+.ai1ec-event-time {
+    color:#f69679 !important;
+}
+.ai1ec-date {
+    background:#fff !important;
+    border-top:0 !important;
+}
+.ai1ec-subscribe-buttons-widget {
+    margin: 15px 0;
+    float:left;
+}
+li#text-3 a {
+    margin-left:35px;    
+}		
+
+/* Calendar Page
+-------------------------------------------------------------- */
+
+#ai1ec-container {
+    margin-right:5% !important;
+}
+.ai1ec-weekday-date {
+    color:#f69679 !important;  
+}
+.ai1ec-weekday-day {
+    color:#f69679 !important;
+}
+.ai1ec-calendar-toolbar {
+    border:1px solid #fff !important;
+}
+
+/* Blog Page
+-------------------------------------------------------------- */
+
+.post-excerpt > small {
+    float:left;
+}
+.post-excerpt > a > img {
+    clear:both;
+}
+.post-excerpt > p {
+    margin-top:70px;
+}
+.post > p {
+    clear:both;
+}
+
+/* Single Event Pages
+-------------------------------------------------------------- */
+
+.single .ai1ec-event-details {
+}
+.single .ai1ec-col-sm-3 {
+    width:auto !important;
+}
+.single .ai1ec-event-footer {
+    display:none !important;
+}
+.single .ai1ec-actions {
+    margin-right:2%; !important;
+}
+/* work around script nonsense at top of page - edit the single.php file later... */
+.single > #nav-box {
+    z-index:1;
+}
+.single > #wrapper {
+    margin-top:-23px;
+}
+.single > .ai1ec-time {
+    display:none;
+}
+.single > .ai1ec-location {
+    display:none;
+}
+.single > p {
+    display:none;
+}
+
+/* Contact Page Template
+-------------------------------------------------------------- */
+
+div[role="form"] {
+    width:500px;
+    text-align:left;
+    border-radius:5px;
+    background:#f69679;
+    padding-top:10px;
+    margin-left:5% !important;
+    color:#fff;
+}
+div[role="form"] p:first-of-type {
+    padding-top:15px;
+}
+div[role="form"] p:last-of-type {
+    padding-bottom:15px;
+}
+form, input{
+    width:80%;
+}
+textarea {
+    margin-left:5%;
+}
+input[type="submit"] {
+    width:20%;
+    float:left;
+}
+textarea.wpcf7-textarea {
+    margin-top:5px !important;
+}
+
+/* errors & notifications */
+span.wpcf7-not-valid-tip {
+    color:beige !important;
+    font-size:.8em !important;
+    margin-top:5px;
+    text-align:center;
+}
+.wpcf7-validation-errors, .wpcf7-mail-sent-ok {
+    color:beige;
+    font-family: 'Roboto', sans-serif;
+    border:2px solid #f69679 !important;
+    text-align:center;
+}
+
